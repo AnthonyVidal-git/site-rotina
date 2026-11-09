@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Minha rotina</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="wrap">
+  <header class="top">
+    <p class="date" id="date"></p>
+    <h1 id="greet">Bom dia</h1>
+    <p class="progress" id="progress"></p>
+  </header>
+
+  <section class="day" aria-label="Seu dia em 24 horas">
+    <div class="track" id="track">
+      <div class="now" id="now"><span id="nowLabel"></span></div>
+    </div>
+    <div class="hours" aria-hidden="true">
+      <span>0h</span><span>6h</span><span>12h</span><span>18h</span><span>24h</span>
+    </div>
+  </section>
+
+  <section class="lists" id="lists"></section>
+
+  <form class="add" id="add">
+    <h2>Adicionar à rotina</h2>
+    <label>O que fazer
+      <input name="name" required maxlength="40" placeholder="Ex.: Estudar React">
+    </label>
+    <label>Começa às
+      <input name="start" type="time" required value="08:00">
+    </label>
+    <label>Dura (min)
+      <input name="dur" type="number" min="5" max="600" step="5" required value="30">
+    </label>
+    <button type="submit">Adicionar</button>
+  </form>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
